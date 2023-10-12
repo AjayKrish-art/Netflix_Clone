@@ -1,13 +1,303 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../My Netflix/Netflix1.css">
+<!--     <link rel="stylesheet" href="../My Netflix/Netflix1.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+body{
+    background: linear-gradient(rgba(0, 8, 29, 0.7) 10%,  rgba(0, 8, 29,1) 20% ,  rgba(0, 8, 29,1) 100%) 
+    ,  url(http://surl.li/gniyu);
+    background-size: 100% ;
+}
+.s1{
+    height: 900px;
+    color: white;
+}
+
+nav{
+    width: 1253px;
+    height: 86px;
+    margin: auto;
+    padding: 0px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo svg{
+    width: 148px;
+    height: 40px;
+    fill: rgb(229, 9, 20);
+}
+nav>div{
+    display: flex;
+}
+#dropdown{
+    background-color: rgba(0, 0, 0, 0.597);
+    width: 126px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid 1px grey;
+    border-radius: 4px;
+}
+#dropdown i{
+    font-size: 20px;
+}
+#dropdown select{
+    font-size: 14px;
+    width: 70px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+nav>div button{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(229, 9, 20);
+    width: 77px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 16px;
+}
+section>div{
+    width: 1253px;
+    margin: auto;
+}
+#header-text{
+    width: 885px;
+    height: 210px;
+    margin-top: 94px;
+    padding:0px 100px;
+}
+#header-text h1{
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+}
+#header-text p{
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 16px;
+}
+#signin-box{
+    background: linear-gradient(90deg ,#e50915 , 
+    #00197a , #233371);
+    width: 1053px;
+    height: 158px;
+    margin: 80px 0px 0px 100px;
+    padding: 4px;
+    border-radius: 8px;
+}
+#signin-box>div{
+    background-color: rgb(0,8,29);
+    width: 100%;
+    height: 100%;
+    padding: 24px 42px;
+    border-radius: 8px;
+}
+#signin-box>div h3{
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+#signin-box>div>div{
+    display: flex;
+}
+#signin-box>div input{
+    width: 383px;
+    height: 56px;
+    background-color: rgb(39, 39, 39);
+    border: 1.5px rgb(215, 215, 215) solid;
+    border-radius: 4px;
+}
+#signin-box>div input::placeholder{
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+#signin-box>div button{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #e50915;
+    width: 196px;
+    height: 56px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 4px;
+}
+.s2{
+    background-color: #090626;
+    width: 90%;
+    height: auto;
+    /*     Etharkkaaga height auto kodukkirom...... */
+    margin: auto;
+    border-radius: 8px;
+    color: white;
+}
+.box{
+    padding: 12px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.box h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.box p{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.box img{
+    width: 526px;
+    height: 394px;
+}
+.line{
+    background-color: #494949;
+    height: 1px;
+    width: 1053px;
+}
+.s3{
+    height: auto;
+    color: white;
+    margin-top: 170px;
+}
+.s3>h1{
+    font-size: 2.5rem;
+    font-weight:700;
+    width: 1053px;
+    margin: 10px auto;
+}
+.question-list{
+    width: 1053px;
+    height: 558px;
+    /* margin: auto; */
+}
+.question-list div{
+    background-color: rgb(19, 33, 68);
+    width: 100%;
+    height: 85px;
+    margin-bottom: 8px;
+    padding: 0px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*     rendu idathil transition kodukkirom ????????????// */
+    transition: 0.3s;
+}
+.question-list div:hover{
+    background-color: rgb(64, 77, 112);
+    transition: 0.3s;
+}
+.question-list h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.question-list button{
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.signin-box2{
+    width: 1053px;
+    margin: 16px auto 0px auto;
+}
+.signin-box2 h3{
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.signin-box2>div{
+    display: flex;
+}
+.signin-box2 input{
+    width: 376px;
+    height: 56px;
+    background-color: rgb(39, 39, 39);
+    border: 1.5px solid rgb(215, 215, 215);
+    border-radius: 4px;
+}
+.signin-box2 input::placeholder{
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+.signin-box2 button{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    background-color:#e50915;
+    width: 201px;
+    height: 56px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 4px;
+}
+footer{
+    width: 1053px;
+    height: auto;
+    margin: 170px auto 0px auto;
+    padding-bottom: 100px;
+}
+footer span{
+    font-size: 1rem;
+    font-weight:400;
+    color:rgba(255,255,255,0.7);
+}
+.footer-links{
+    width: 100%;
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 263px 263px 263px 263px;
+    row-gap: 10px;
+}
+.footer-links a{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    display: inline-block;
+    /* display: inline-block; */
+    /* why we give a tag for inline-block */
+}
+footer#dropdown{
+    background-color: #090626;
+    margin: 36px 0px;
+}
+footer#dropdown i{
+    color:white;
+}
+#dropdown1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#dropdown1 select{
+    height: 30px;
+    background-color: #000000;
+    outline: none;
+    border: 2px solid white;
+    width: 7%;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+}
+    </style>        
 </head>
+    
 <body>
     <section class="s1">
         <nav>
